@@ -1,0 +1,88 @@
+.tooltip
+	position: absolute
+	display: flex
+	flex-direction: column
+	flex-flow: column-reverse
+	align-items: center
+	
+	&__box
+		display: flex
+		align-items: center
+		width: 270px
+		padding: 10px
+		background-color: $white
+
+		opacity: 0
+		visibility: hidden
+		transform: translateY(10px)
+		transition: all .4s ease-out
+
+		&:hover 
+			opacity: 1
+			visibility: visible
+			transform: translateY(0)
+	
+	&__banner
+	
+	&__info
+		padding-left: 13px
+	
+	&__title,
+	&__price,
+	&__link
+		font-weight: 300 14px/24px $font-main
+
+	&__title
+		margin-bottom: 10px
+		font-size: 16px
+	
+	&__price
+		margin-bottom: 3px
+
+	&__link
+		color: $color-primary
+
+	&__icon
+		padding-top: 10px
+		
+		&:hover ~ .tooltip__box
+			opacity: 1
+			visibility: visible
+			transform: translateY(0)
+
+		&-content
+			position: relative
+			width: 48px
+			height: 48px
+			border-radius: 50%
+			background-color: rgba(255, 255, 255, .7)
+			transition: background-color .3s ease
+
+			&:hover 
+				background-color: $white
+				cursor: pointer
+
+				&::before,
+				&::after
+					background-color: $color-primary
+
+			&::before,
+			&::after 
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				background-color: #333333
+				transition: .3s ease
+
+			&::before
+				width: 1px
+				height: 20px
+
+			&::after
+				width: 20px
+				height: 1px
+
+		
+

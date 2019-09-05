@@ -1,0 +1,36 @@
+/*
+ * ========================
+ * PROMO
+ * ========================
+ */
+
+.promo
+	position: relative
+	padding-top: 136px
+	padding-bottom: 121px
+	background: url('../img/promo-bg.png') no-repeat center / cover
+
+	&__info
+		max-width: 340px
+
+		&-title
+			margin-bottom: 120px
+			font: 700 50px/59px $font-main
+			color: $white
+
+			span 
+				color: $color-primary
+
+
+	@include width-xs
+		padding: 0
+
+		&__info
+			text-align: center
+
+			&-title
+				font-size: 30px
+				line-height: 1.2em
+
+
+
