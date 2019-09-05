@@ -4,128 +4,57 @@
  * ========================
  */
 .footer 
-	position: relative
-	padding-top: 70px
-	padding-bottom: 80px
-	color: $white
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: flex-start
+	padding-top: 40px
+	padding-bottom: 40px
+	border-top: 1px solid #E0E0E0
+	margin: 65px 35px 0
 
-	&::before
-		content: ''
-		position: absolute
-		top: 0
-		left: 12px
-		width: calc(100% - 24px)
-		height: 100%
-		background-color: #141414
-
-	a 
-		padding-bottom: 0
-		color: inherit
-		@include trs
-
-		&:hover 
-			color: $color-secondary
-		
-		&::after
-			display: none
-
-	&__grid
-		position: relative
-		display: flex
-		justify-content: center
-		align-items: flex-start
-
-	&__col
-
-		&:first-child,
-		&:nth-child(3)
-			margin-right: auto
-
-	&__logo
-		margin-bottom: 30px
-		font-size: 18px
-		font-weight: 300
-
-	&__copyright
-		font-size: 15px
-		font-weight: 300
-		color: #cecece
-
-	&__subtitle
-		margin-bottom: 10px
-		font-size: 15px
+	&__title
+		margin-bottom: 18px
+		font-size: 16px
 		font-weight: 700
-		color: #cfcfcf
+		text-transform: uppercase
+		color: $black
 
-	&__email
-		display: inline-block
-		margin-bottom: 30px
-		font-weight: 300
+	&__list
 
-	&__tel
-		display: block
-		font-weight: 300
-
-		&+&
-			margin-top: 10px
-
-	&__nav
-		display: flex
-		flex-direction: column
-		margin-left: 110px
-
-		&-item
-			display: inline-block
-
-			&+&
-				margin-top: 10px
-
-	&__social
-
-		&-item
-
-			&+&
-				margin-top: 10px
-
-
-	@include width-sm
-
-		&__grid
-			justify-content: space-around
-
-		&__col:first-child,
-		&__col:nth-child(3)
-			margin-right: 0
-
-		&__nav
-			margin-left: 0
-
-
-	@media (max-width: 620px)
-		padding: 50px 30px
-
-		&__grid
-			flex-direction: column
-
-		&__logo
+	&__item
+		&:not(:last-child)
 			margin-bottom: 10px
 
-		&__copyright
-			margin-bottom: 30px
+	&__link
+		font-size: 14px
+		font-weight: 300
+		color: $black
+		@include trs()
 
-		&__nav
-			display: none
+		&:hover
+			color: $color-secondary
 
-		&__social
-			margin-top: 30px
+	&__mailing
+		
+		&-title
+			margin-bottom: 25px
+			font-size: 16px
+			font-weight: 700
+			color: #BDBDBD
+		
+		&-input
+			margin-bottom: 17px
+		
+		&-btn
+			padding: 0
+			border: none
+			margin: 0
+			font-size: 18px
+			font-weight: 300
+			color: $color-secondary
+			background-color: transparent
 
-
-	@include width-xs
-		padding: 50px 0
-
-		&::before
-			left: 0
-			width: 100%
-
-
+			&:hover
+				cursor: pointer
 
