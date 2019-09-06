@@ -22,15 +22,25 @@
 				color: $color-primary
 
 
-	@include width-xs
-		padding: 0
+	@include width-md
+		padding: 100px 0
+
+		&__info-title
+			font-size: 36px
+			line-height: 1.3
+			margin-bottom: 80px
+
+
+	@include width-sm
+		padding: 70px 0
 
 		&__info
-			text-align: center
-
+			max-width: 250px
+			
 			&-title
 				font-size: 30px
-				line-height: 1.2em
+				margin-bottom: 50px
+
 
 
 
