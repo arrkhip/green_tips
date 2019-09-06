@@ -147,10 +147,31 @@ textarea:focus:-ms-input-placeholder
   overflow: hidden
   padding-right: 17px
 
-.headline 
-  font: 700 30px/1 $font-main
+
+input[type=checkbox] 
+  display: none
+
+input[type=checkbox] + label:before 
+  content: "\2713"
+  color: transparent
+  display: inline-block
+  border: 1px solid #E0E0E0
+  font-size: 16px    
+  line-height: 16px
+  margin: -5px 5px 0 0
+  height: 14px
+  width: 14px
   text-align: center
-  color: $color-text
+  vertical-align: middle
+  transition: color ease .3s
+
+
+input[type=checkbox]:checked + label:before 
+  color: $color-secondary
+
+
+
+
 
   
 

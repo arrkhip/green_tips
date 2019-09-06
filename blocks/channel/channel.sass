@@ -20,19 +20,72 @@
 			align-items: flex-start
 			justify-content: space-between
 
+		.input,
 		&-btn
 			width: 100%
-			max-width: 226px
-			background-color: $white
+			max-width: 25%
+
+		.input
+			margin-right: 10px
+
+		&-btn
+			height: 60px
 			border: 1px solid $color-primary
+			background-color: $white
 
 			&::before
-				display: none
-
-			&:hover
 				background-color: $color-primary
+
+			&:hover span
 				color: $white
 
+			span 
+				font-size: 16px
+				color: #08131F
 
-.checkbox
-	margin-top: 27px
+	
+	.checkbox-block
+		margin-top: 27px
+		color: #BDBDBD
+
+		a
+			vertical-align: baseline
+			color: #EB5757
+			@include trs()
+
+			&:hover
+				opacity: .8
+
+
+	@include width-lg
+		padding: 50px 0
+
+
+	@include width-md
+
+		&__title
+			font-size: 26px
+			line-height: 36px
+
+		&__descr
+			padding-top: 40px
+			padding-bottom: 25px
+
+
+	@include width-sm
+		padding: 35px 0
+
+		&__form-wrap
+			flex-direction: column
+
+			.input
+				max-width: 100%
+				margin-bottom: 15px
+
+		&__form-btn
+			max-width: 100%
+			background-color: $color-primary
+
+			span 
+				color: $white
+

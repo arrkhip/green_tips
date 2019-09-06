@@ -36,6 +36,7 @@
 			color: $color-secondary
 
 	&__mailing
+		max-width: 238px
 		
 		&-title
 			margin-bottom: 25px
@@ -44,6 +45,7 @@
 			color: #BDBDBD
 		
 		&-input
+			width: 100%
 			margin-bottom: 17px
 		
 		&-btn
@@ -58,3 +60,30 @@
 			&:hover
 				cursor: pointer
 
+
+	@include width-md
+		margin-left: 15px
+		margin-right: 15px
+
+		&__mailing
+			max-width: 200px
+
+			&-input
+				height: 45px
+				line-height: 45px
+
+	
+	@include width-sm
+
+		&__col
+			width: 100%
+			
+
+			&:nth-child(2),
+			&:nth-child(3)
+				width: 50%
+				margin: 35px 0
+
+		&__logo
+			display: inline-block
+			width: 120px

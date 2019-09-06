@@ -1,19 +1,45 @@
 .winner 
 	position: relative
-	padding-top: 136px
-	padding-bottom: 121px
+	padding-top: 126px
+	padding-bottom: 262px
 	margin: 35px
 	background: url('../img/winner-bg.png') no-repeat center / cover
-
+	
+	&__medal
+		position: absolute
+		top: 15px
+		right: 25px
+		width: 65px
+		height: 109px	
+		background: url('../img/icons/i-medal.png') no-repeat center
+	
 	&__info
 		max-width: 455px
 		margin: 0 auto
 
 	&__title
-		margin-bottom: 50px
+		margin-bottom: 40px
 		font: 700 34px/48px $font-main
 		color: $white
 
 		span 
 			display: block
 			color: $color-primary
+
+
+	@include width-lg
+		padding-top: 112px
+		padding-bottom: 130px
+
+
+	@include width-sm
+		margin: 30px 0
+
+		&__title
+			font-size: 26px
+			line-height: 36px
+
+
+	@include width-xs
+		padding-top: 90px
+		padding-bottom: 100px
